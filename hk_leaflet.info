@@ -1,0 +1,7 @@
+name = HK Leaflet
+description = Customizations for HK Leaflet Map.
+core = 7.x
+package = Leaflet
+dependencies[] = leaflet
+dependencies[] = ip_geoloc
+;scripts = zoom.js
