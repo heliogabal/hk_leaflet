@@ -8,7 +8,10 @@
           lMap.setView(e.latlng,16,.5,.25,true);
         })
       });
-
+      $(document).on('submit','#edit-submit-karten', function(e) {
+          var lMap = Drupal.settings.leaflet[0].lMap;
+          lMap.fitBounds(e.latlng,16,.5,.25,true);
+              });
     }
   }
 })(jQuery);
