@@ -4,4 +4,4 @@ core = 7.x
 package = Leaflet
 dependencies[] = leaflet
 dependencies[] = ip_geoloc
-;scripts = zoom.js
+scripts = zoom.js
