@@ -1,4 +1,17 @@
 <?php
-//  drupal_add_js(drupal_get_path('module', 'hk_leaflet') .'/zoom.js',array('group' => 
-JS_DEFAULT, 
-'weight' => -5));
+//  drupal_add_js(drupal_get_path('module', 'hk_leaflet') .'/zoom.js',array('group' => JS_DEFAULT, 'weight' => -5));
+
+/**
+* Implements hook_leaflet_map_info_alter(). ip_geoloc_leaflet_map_info_alter
+* Customize some settings of the maps across the site.
+* @param boolean $map_info
+*/
+function hk_leaflet_ip_geoloc_leaflet_map_info_alter(&$map_info) {
+  // Walk each map setting (OSM, bing, etc) to disable debilitating scroll-zoom
+  foreach ($map_info as $map_id => $info) {
+    $map_info[$map_id]['settings']['scrollWheelZoom'] = FALSE;
+    $map_info[$map_id]['settings']['minZoom'] = 9;
+    $map['settings']['maxBounds'] = array([[52.270517, 12.796015],[52.721994, 13.812250]]);
+    $map['settings']['zoomIndicator'] = true;
+  }
+}
