@@ -5,8 +5,8 @@
       $(document).bind('leaflet.feature', function(e, lFeature, feature) {
         lFeature.on('click', function(e) {
           var lMap = Drupal.settings.leaflet[0].lMap;
-          lMap.setView(e.latlng,16,1,.15,true);
-          $('.apart').slice(2).css("display","none");
+          lMap.setView(e.latlng,18,1,.15,true);
+          $('.apart').slice(3).css("display","none");
         var toggleMinus = 'sites/all/themes/hk_theme/images/bullet_toggle_minus.png';
         var togglePlus = 'sites/all/themes/hk_theme/images/bullet_toggle_plus.png';
         var show = Drupal.t("Show All");
