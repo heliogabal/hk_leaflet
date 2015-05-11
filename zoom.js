@@ -13,7 +13,7 @@
             var hide = Drupal.t("Verbergen");
             $('.tablehead .more').replaceWith('<button class="toggle" data-text-original="Alle zeigen" data-text-swap="Verbergen"><strong class="show">' + show + '</strong></button>');
             $('button.toggle').click(function() {
-              $('.apart.toggle').toggle();
+              $('.apart.toggle,.leaflet-popup-content img,.leaflet-popup-content p').slideToggle();
               var el = $(this);
               el.text() == el.data("text-swap")
                 ? el.text(el.data("text-original"))
