@@ -5,6 +5,7 @@
 * Customize some settings of the maps across the site.
 * @param boolean $map_info
 */
+
 function hk_leaflet_leaflet_map_info_alter(&$map_info) {
   // dpm();
   // Walk each map setting (OSM, bing, etc) to disable debilitating scroll-zoom
