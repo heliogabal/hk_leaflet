@@ -10,8 +10,8 @@
             var n = $(".leaflet-popup-content .apart").length;
             if ( n > 5) {
                         $('.leaflet-popup-content').find('.apart:gt(4)').css("display","none").addClass('toggle');
-                        var toggleMinus = 'sites/all/themes/hk_theme/images/bullet_toggle_minus.png';
-                        var togglePlus = 'sites/all/themes/hk_theme/images/bullet_toggle_plus.png';
+                        // var toggleMinus = 'sites/all/themes/hk_theme/images/bullet_toggle_minus.png';
+                        // var togglePlus = 'sites/all/themes/hk_theme/images/bullet_toggle_plus.png';
                         var show = Drupal.t("Show all");
                         var hide = Drupal.t("Hide");
                         $('.tablehead .more').replaceWith('<button class="toggle" data-text-original="' + show + '" data-text-swap="' + hide + '"><strong class="show">' + show + '</strong></button>');
@@ -43,7 +43,7 @@
             position: { my: "center bottom", at: "center-180 bottom-80", collision: "fit flip", of: "#page" }
           });
       $( '#block-menu-menu-service-menu .menu li:nth-child(2)').click(function(e) {
-          $( ".ui-dialog,#block-views-exp-karten-kaufen,#block-views-exp-karten-mieten").toggle();
+          $( ".ui-dialog,#block-views-exp-karten-kaufen,#block-views-exp-karten-mieten, #search").toggle();
             e.preventDefault();
           });
       }
