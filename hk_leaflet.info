@@ -5,3 +5,4 @@ package = Leaflet
 dependencies[] = ip_geoloc
 scripts[] = hk_leaflet_script.js
 files[] = MimeMailSystem__MandrillMailSystem.mail.inc
+files[] = MimeMailSystem__SmtpMailSystem.mail.inc
