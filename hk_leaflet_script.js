@@ -35,15 +35,19 @@
       $( ".front #block-views-exp-karten-map-page, .front #search").dialog({
             height: "auto",
             minHeight: "120",
-            width: "auto",
+            width: "640",
+            maxWidth: "640",
             resizable: "false",
             closeOnEscape: "true",
+            modal: "false",
             hide: { effect: "explode", duration: "1000" },
-            //hide: "false",
+            autoOpen: "false",
             position: { my: "center bottom", at: "center-180 bottom-80", collision: "fit flip", of: "#page" }
           });
+      $( ".ismobiledevice.front .ui-dialog").hide();
+
       $( '#block-menu-menu-service-menu .menu li:nth-child(2)').click(function(e) {
-          $( ".ui-dialog,#block-views-exp-karten-kaufen,#block-views-exp-karten-mieten, #search").toggle();
+          $( ".ui-dialog,#block-views-exp-karten-kaufen,#block-views-exp-karten-mieten, .not-front #search").toggle();
             e.preventDefault();
           });
       }
